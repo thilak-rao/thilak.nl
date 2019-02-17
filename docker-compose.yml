@@ -1,4 +1,4 @@
-version: '3.6'
+version: '3.7'
 services:
 
   wp_thilak:
@@ -23,3 +23,8 @@ networks:
 volumes:
   wp_thilak_data:
     name: wp_thilak_data
+    driver: local
+    driver_opts:
+      type: 'none'
+      o: 'bind'
+      device: ${PWD}${WORDPRESS_DATA_DIR}
