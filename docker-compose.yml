@@ -1,8 +1,7 @@
 version: '3.7'
 services:
-
   wp_thilak:
-    image: wordpress:${WORDPRESS_VERSION}
+    image: wordpress:php7.3-fpm
     container_name: wp_thilak
     volumes:
       - wp_thilak_data:/var/www/html
